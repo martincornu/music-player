@@ -17,8 +17,9 @@
 
 #define DEBUG
 
-#define INPUT_1		2   /* entrée qui doit être activée */
-#define OUTPUT_1	3
+#define INPUT_1		  2   /* entrée qui doit être activée */
+#define OUTPUT_1	  3
+#define OUTPUT_LED  4
 
 #define SD_CS_PIN   10   /* Pin sur laquelle est branche la pin CS du module carte SD */
 #define SPEAKER_PIN 9   /* Pin sur laquelle est branche le positif du haut parleur */
@@ -40,14 +41,17 @@ void setup()
 {
   #ifdef DEBUG
   Serial.begin(9600);
+  Serial.println("Scape game Saint-Etienne");
   #endif
 
   pinMode(INPUT_1,INPUT_PULLUP);
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(OUTPUT_1, OUTPUT);
+  pinMode(OUTPUT_LED, OUTPUT);
 
   digitalWrite(LED_BUILTIN,LOW);
   digitalWrite(OUTPUT_1,LOW);
+  digitalWrite(OUTPUT_LED,LOW);
   
   tmrpcm.speakerPin=SPEAKER_PIN;
   if(!SD.begin(SD_CS_PIN))
@@ -77,8 +81,9 @@ void loop() {
 
       // only toggle the LED if the new button state is HIGH
       if (buttonState == LOW) {
-        digitalWrite(LED_BUILTIN,HIGH);
+        digitalWrite(LED_BUILTIN, HIGH);
         digitalWrite(OUTPUT_1,HIGH);
+        digitalWrite(OUTPUT_LED,HIGH);
         #ifdef DEBUG
         Serial.println("start playing");
         #endif
