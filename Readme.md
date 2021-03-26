@@ -1,6 +1,6 @@
-# Arduino loud music player
+# Arduino loud music player on RFID detection
 
-The purpose of the project is to automatically play an mp3 stored in an SD card to a 30W speaker.
+The purpose of the project is to automatically play an mp3 stored in an SD card to a 30W speaker if an RFID tag is detected.
 
 ## Goals
 
@@ -22,4 +22,4 @@ Alim 5-12V DC (for eleego uno)
 
 ## Schematic
 
-![](hw\music_player_rf_reader_circuit.jpg)
+![](hw/music_player_rf_reader_circuit.jpg)
