@@ -88,8 +88,8 @@ void loop() {
         Serial.println("start playing");
         #endif
         tmrpcm.play(FILENAME);
-        delay(60000);         /* Wait 1min to be sure audio wav finished */
-        exit(0);
+        while(tmrpcm.isPlaying()){} // Wait audio wav finished
+        exit(0);                    // exit
       }
     }
   }
