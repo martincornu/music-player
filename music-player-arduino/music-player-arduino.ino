@@ -5,6 +5,7 @@
 * Description: This program read an input and if it is HIGH then
 * it read a mp3 stored on a SD card and play it on external speaker and
 * also activate an ouput.
+* Room : peter pan, capitaine crochet. Trigger voice and open bedroom door.
 * Revision History:
 * 23/09/2020 Rev 01.00 Creation (Martin Cornu)
 * 01/10/2020 Rev 1.1 Bugs fixs - exit program too quickly - input RF default state HIGH
