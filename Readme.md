@@ -33,10 +33,14 @@ We need to convert an audio file into wave file. We can use this online [convert
 3. Change audio channels to Mono.
 4. Click on “Show advanced options”.
 5. Set the PCM format as PCM unsigned 8-bit.
-6. Click on “Convert” and the files are converted
+6. Click on “Convert” and the files are converted.
 
 Formatting Micro-SD Card:
 
 1. Install SD Formatter tool
 2. Format card
 3. Copy wave file
+
+## FIRMWARE
+
+- music-player-arduino/music-player-arduino.ino is used to trigger capitaine crochet voice and open pan bedroom door.
